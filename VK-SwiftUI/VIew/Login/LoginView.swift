@@ -8,10 +8,13 @@
 import SwiftUI
 import Combine
 
-struct ContentView: View {
+struct LoginView: View {
     
     @State private var login: String = ""
     @State private var password: String = ""
+    
+    @State private var showIncorrentCredentialsWarning = false
+    @Binding var isUserLoggedIn: Bool
     
     private let keyboardIsOnPublisher = Publishers.Merge(
         NotificationCenter.default.publisher(for: UIResponder.keyboardWillChangeFrameNotification).map { _ in true },
@@ -24,37 +27,20 @@ struct ContentView: View {
             .overlay(
                 ScrollView(.vertical, showsIndicators: false) {
                     VStack {
-                        
                         Image("logo")
                             .resizable()
                             .frame(minWidth: 50, idealWidth: 200, maxWidth: 200, minHeight: 50, idealHeight: 200, maxHeight: 200, alignment: .center)
                             .scaledToFit()
                             .padding()
                         VStack {
-                            HStack {
-                                Text("Login:")
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                Spacer()
-                                TextField("", text: $login)
-                                    .frame(maxWidth: 200)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                            }
-                            HStack {
-                                Text("Password:")
-                                    .font(.headline)
-                                    .foregroundColor(.white)
-                                Spacer()
-                                SecureField("", text: $password)
-                                    .frame(maxWidth: 200)
-                                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                            }
+                            LoginPasswordView(login: $login, password: $password)
                             Button(action: {
-                                print("Hello")
-                                
-                            }) {
+                                let loginData = verifyLoginData(login: login, password: password)
+                                showIncorrentCredentialsWarning = !loginData
+                                isUserLoggedIn = loginData
+                            }, label: {
                                 Text("Log in")
-                            }
+                            })
                             .buttonStyle(BlueButton())
                             .padding(.top, 40)
                             .padding(.bottom, 20)
@@ -65,18 +51,29 @@ struct ContentView: View {
                         .background(Color.blue.opacity(0.5))
                         .cornerRadius(24)
                     }
-                    
-                }
-                .onTapGesture {
+                }.onTapGesture {
                     UIApplication.shared.endEditing()
-                }
+                }.alert(isPresented: $showIncorrentCredentialsWarning, content: {
+                    Alert(title: Text("Error"),
+                          message: Text("Incorrent Login/Password was entered"),
+                          dismissButton: .default(Text("Ok"), action: clearAll))
+                })
             )
+    }
+    
+    private func verifyLoginData(login: String, password: String) -> Bool {
+        return login == "Admin" && password == "Admin"
+    }
+    
+    private func clearAll() {
+        password = ""
+        login = ""
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-            .previewInterfaceOrientation(.portraitUpsideDown)
-    }
-}
+//struct ContentView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        LoginView()
+//            .previewInterfaceOrientation(.portraitUpsideDown)
+//    }
+//}
