@@ -13,7 +13,6 @@ struct FriendView: View {
     
     var body: some View {
         VStack{
-  //          BgImage()
             
             AsyncImage(
                 url: URL(string: friend.photo),
@@ -33,13 +32,6 @@ struct FriendView: View {
             VStack(alignment: .center) {
                 Text(friend.firstName)
                     .font(Font.system(size: 20, design: .rounded).bold())
-                
-                Text(friend.lastName)
-                    .font(Font.system(size: 16, design: .rounded))
-                    .foregroundColor(Color.gray)
-                
-                Text(friend.homeTown)
-                    .padding(.top, 20)
                 
             }
             .padding([.leading, .trailing])

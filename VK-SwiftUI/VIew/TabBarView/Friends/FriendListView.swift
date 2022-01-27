@@ -30,26 +30,27 @@ struct FriendListView: View {
                 ).frame(width: 100, height: 100)
                 
                 VStack(alignment: .leading) {
-                    HStack(alignment: .top) {
-                        Text(friend.firstName)
-                        Text(friend.lastName)
+                    Text(friend.firstName)
+                    if let lastName = friend.lastName {
+                        Text(lastName)
                     }
-                    .font(Font.system(size: 20, design: .rounded).bold())
-                    HStack {
-                        Image(systemName: "house.circle.fill")
-                        Text(friend.homeTown)
-                            .font(Font.system(size: 16, design: .rounded))
+                    if let city = friend.city {
+                        HStack {
+                            Image(systemName: "house.circle.fill")
+                            Text(city.title)
+                                .font(Font.system(size: 14, design: .rounded))
                             
-                    }.foregroundColor(Color.gray)
-                    
-                    if friend.isOnline {
-                        Text("online")
-                            .font(Font.system(size: 12, design: .rounded))
-                            .foregroundColor(Color.green)
+                        }.foregroundColor(Color.gray)
+                        
+//                        if friend.online == 1 {
+//                            Text("online")
+//                                .font(Font.system(size: 12, design: .rounded))
+//                                .foregroundColor(Color.green)
+//                        }
                     }
                 }
-                Spacer()
+                .font(Font.system(size: 20, design: .rounded).bold())
             }
-            .padding(.vertical)
+            
     }
 }

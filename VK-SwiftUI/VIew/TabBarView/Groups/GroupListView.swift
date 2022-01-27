@@ -23,20 +23,14 @@ struct GroupListView: View {
                             .modifier(RoundFrameWithShadow(frameColor: .white))
                     }, placeholder: {
                         ProgressView()
-                            
+                        
                     }
                 ).frame(width: 100, height: 100)
                 
-                VStack(alignment: .leading) {
-                    Text(group.name)
-                        .font(Font.system(size: 20, design: .rounded).bold())
-                    Text(group.info)
-                        .font(Font.system(size: 16, design: .rounded))
-                        .foregroundColor(Color.gray)
-                }
-                Spacer()
+                Text(group.name)
+                    .font(Font.system(size: 20, design: .rounded).bold())
+                
             }
-            .padding(.vertical)
         }
     }
 }
