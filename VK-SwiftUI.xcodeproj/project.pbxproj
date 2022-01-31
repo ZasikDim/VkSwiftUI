@@ -22,6 +22,7 @@
 		0F5B4A0927A1A14E00F064DC /* RealmService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B4A0827A1A14E00F064DC /* RealmService.swift */; };
 		0F5B4A0B27A1B1C600F064DC /* DetachableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B4A0A27A1B1C600F064DC /* DetachableObject.swift */; };
 		0F5B4A0E27A1B85B00F064DC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0F5B4A0D27A1B85B00F064DC /* Alamofire */; };
+		0F95B49627A8209B00DF7A29 /* CodingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F95B49527A8209B00DF7A29 /* CodingStyle.swift */; };
 		0FB34A55278C4CA500B81985 /* VK_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB34A54278C4CA500B81985 /* VK_SwiftUIApp.swift */; };
 		0FB34A57278C4CA500B81985 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB34A56278C4CA500B81985 /* LoginView.swift */; };
 		0FB34A59278C4CA600B81985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FB34A58278C4CA600B81985 /* Assets.xcassets */; };
@@ -51,6 +52,7 @@
 		0F5B4A0627A0497A00F064DC /* GroupsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsViewModel.swift; sourceTree = "<group>"; };
 		0F5B4A0827A1A14E00F064DC /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		0F5B4A0A27A1B1C600F064DC /* DetachableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetachableObject.swift; sourceTree = "<group>"; };
+		0F95B49527A8209B00DF7A29 /* CodingStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingStyle.swift; sourceTree = "<group>"; };
 		0FB34A51278C4CA500B81985 /* VK-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB34A54278C4CA500B81985 /* VK_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK_SwiftUIApp.swift; sourceTree = "<group>"; };
 		0FB34A56278C4CA500B81985 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -123,6 +125,7 @@
 			isa = PBXGroup;
 			children = (
 				0FB34A54278C4CA500B81985 /* VK_SwiftUIApp.swift */,
+				0F95B49527A8209B00DF7A29 /* CodingStyle.swift */,
 				0F5B4A0F27A2BDE300F064DC /* Service */,
 				0FD3E5182791C646009749A6 /* Model */,
 				0FD3E5122791C18B009749A6 /* VIew */,
@@ -318,6 +321,7 @@
 				0FB6159227904C880028DD0F /* GroupsListView.swift in Sources */,
 				0FB34A55278C4CA500B81985 /* VK_SwiftUIApp.swift in Sources */,
 				0F3EA7072795C7D00016D99E /* ContainerView.swift in Sources */,
+				0F95B49627A8209B00DF7A29 /* CodingStyle.swift in Sources */,
 				0F5B49FD279EF48100F064DC /* FriendsViewModel.swift in Sources */,
 				0FB6159027903DB20028DD0F /* FriendListView.swift in Sources */,
 				0FD3E51E2791D17E009749A6 /* GroupListView.swift in Sources */,

@@ -20,8 +20,6 @@ class GroupsViewModel: ObservableObject {
    
     private lazy var realmGroups: Results<Group>? = try? realmService.get(Group.self, configuration: Realm.Configuration(deleteRealmIfMigrationNeeded: true))
     
-
-    
     init(realmService: AnyRealmService, vkService: VKService) {
         self.realmService = realmService
         self.vkService = vkService

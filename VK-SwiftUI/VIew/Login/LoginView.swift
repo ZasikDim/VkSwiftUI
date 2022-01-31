@@ -16,6 +16,8 @@ struct LoginView: View {
     @State private var showIncorrentCredentialsWarning = false
     @Binding var isUserLoggedIn: Bool
     
+    @CodingStyle(codingStyle: .camelCase) private var camelCaseString = "Введите логин и пароль:"
+    
     private let keyboardIsOnPublisher = Publishers.Merge(
         NotificationCenter.default.publisher(for: UIResponder.keyboardWillChangeFrameNotification).map { _ in true },
         NotificationCenter.default.publisher(for: UIResponder.keyboardWillHideNotification).map { _ in false }
@@ -33,6 +35,7 @@ struct LoginView: View {
                             .scaledToFit()
                             .padding()
                         VStack {
+                            Text(camelCaseString)
                             LoginPasswordView(login: $login, password: $password)
                             Button(action: {
                                 let loginData = verifyLoginData(login: login, password: password)
@@ -71,9 +74,9 @@ struct LoginView: View {
     }
 }
 
-//struct ContentView_Previews: PreviewProvider {
-//    static var previews: some View {
-//        LoginView()
-//            .previewInterfaceOrientation(.portraitUpsideDown)
-//    }
-//}
+struct ContentView_Previews: PreviewProvider {
+    static var previews: some View {
+        LoginView()
+            .previewInterfaceOrientation(.portraitUpsideDown)
+    }
+}
