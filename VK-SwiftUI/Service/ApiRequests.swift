@@ -8,6 +8,11 @@
 import Foundation
 import Alamofire
 
+enum TypeRev: Int {
+    case chronological = 0
+    case antiСhronological = 1
+}
+
 class VKService {
     
     static let session: Session = {
@@ -22,6 +27,7 @@ class VKService {
     private enum Paths: String {
         case getFriends = "friends.get"
         case getGroups = "groups.get"
+        case getUserPhotos = "photos.getUserPhotos"
     }
     
     func getFriends(completion: @escaping ((Result<[Friend], Error>) -> Void)) {
@@ -80,8 +86,35 @@ class VKService {
                 if let data = response.data {
                     do {
                         let groups = try JSONDecoder().decode(GroupsResponse.self, from: data).response.items
-                        
                         completion(.success(groups))
+                    } catch {
+                        completion(.failure(error))
+                    }
+                }
+            }
+        }
+    }
+    
+    func getUserPhotos(ownerId: Int, completion: @escaping ((Result<[Photo], Error>) -> Void)) {
+        let url = baseURL + Paths.getUserPhotos.rawValue
+
+        let parameters: Parameters = [
+            "access_token": MySession.shared.token,
+            "v": version,
+            "user_id": ownerId,
+            "extended": "1",
+            "rev": TypeRev.antiСhronological.rawValue,
+        ]
+
+        VKService.session.request(url, parameters: parameters).responseJSON { (response) in
+            switch response.result {
+            case .failure(let error):
+                completion(.failure(error))
+            case .success( _):
+                if let data = response.data {
+                    do {
+                        let photos = try JSONDecoder().decode(RootPhotos.self, from: data).response.items
+                        completion(.success(photos))
                     } catch {
                         completion(.failure(error))
                     }

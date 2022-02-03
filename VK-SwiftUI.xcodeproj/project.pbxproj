@@ -23,10 +23,17 @@
 		0F5B4A0B27A1B1C600F064DC /* DetachableObject.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F5B4A0A27A1B1C600F064DC /* DetachableObject.swift */; };
 		0F5B4A0E27A1B85B00F064DC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0F5B4A0D27A1B85B00F064DC /* Alamofire */; };
 		0F95B49627A8209B00DF7A29 /* CodingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F95B49527A8209B00DF7A29 /* CodingStyle.swift */; };
+		0FA62E7B27A96080001D4990 /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA62E7A27A96080001D4990 /* HeartButton.swift */; };
 		0FB34A55278C4CA500B81985 /* VK_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB34A54278C4CA500B81985 /* VK_SwiftUIApp.swift */; };
 		0FB34A57278C4CA500B81985 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB34A56278C4CA500B81985 /* LoginView.swift */; };
 		0FB34A59278C4CA600B81985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FB34A58278C4CA600B81985 /* Assets.xcassets */; };
 		0FB34A5C278C4CA600B81985 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FB34A5B278C4CA600B81985 /* Preview Assets.xcassets */; };
+		0FB4727927A83084004FBA5F /* Photo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB4727827A83084004FBA5F /* Photo.swift */; };
+		0FB4727C27A83298004FBA5F /* ASCollectionView in Frameworks */ = {isa = PBXBuildFile; productRef = 0FB4727B27A83298004FBA5F /* ASCollectionView */; };
+		0FB4727E27A83323004FBA5F /* FriendViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB4727D27A83323004FBA5F /* FriendViewModel.swift */; };
+		0FB4728027A838C3004FBA5F /* PhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB4727F27A838C3004FBA5F /* PhotoView.swift */; };
+		0FB4728327A83951004FBA5F /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0FB4728227A83951004FBA5F /* Kingfisher */; };
+		0FB4728527A83982004FBA5F /* DetailPhotoView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB4728427A83982004FBA5F /* DetailPhotoView.swift */; };
 		0FB6159027903DB20028DD0F /* FriendListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB6158F27903DB20028DD0F /* FriendListView.swift */; };
 		0FB6159227904C880028DD0F /* GroupsListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB6159127904C880028DD0F /* GroupsListView.swift */; };
 		0FCC087A27970A1600ACDE31 /* FriendView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC087927970A1600ACDE31 /* FriendView.swift */; };
@@ -53,11 +60,16 @@
 		0F5B4A0827A1A14E00F064DC /* RealmService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RealmService.swift; sourceTree = "<group>"; };
 		0F5B4A0A27A1B1C600F064DC /* DetachableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetachableObject.swift; sourceTree = "<group>"; };
 		0F95B49527A8209B00DF7A29 /* CodingStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingStyle.swift; sourceTree = "<group>"; };
+		0FA62E7A27A96080001D4990 /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
 		0FB34A51278C4CA500B81985 /* VK-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB34A54278C4CA500B81985 /* VK_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK_SwiftUIApp.swift; sourceTree = "<group>"; };
 		0FB34A56278C4CA500B81985 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		0FB34A58278C4CA600B81985 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FB34A5B278C4CA600B81985 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0FB4727827A83084004FBA5F /* Photo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Photo.swift; sourceTree = "<group>"; };
+		0FB4727D27A83323004FBA5F /* FriendViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendViewModel.swift; sourceTree = "<group>"; };
+		0FB4727F27A838C3004FBA5F /* PhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoView.swift; sourceTree = "<group>"; };
+		0FB4728427A83982004FBA5F /* DetailPhotoView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailPhotoView.swift; sourceTree = "<group>"; };
 		0FB6158F27903DB20028DD0F /* FriendListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendListView.swift; sourceTree = "<group>"; };
 		0FB6159127904C880028DD0F /* GroupsListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsListView.swift; sourceTree = "<group>"; };
 		0FCC087927970A1600ACDE31 /* FriendView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendView.swift; sourceTree = "<group>"; };
@@ -78,6 +90,8 @@
 				0F5B4A0E27A1B85B00F064DC /* Alamofire in Frameworks */,
 				0F5B4A02279EFA5F00F064DC /* RealmSwift in Frameworks */,
 				0F5B4A00279EFA5F00F064DC /* Realm in Frameworks */,
+				0FB4727C27A83298004FBA5F /* ASCollectionView in Frameworks */,
+				0FB4728327A83951004FBA5F /* Kingfisher in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -145,11 +159,23 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		0FB4727727A82E55004FBA5F /* Friend */ = {
+			isa = PBXGroup;
+			children = (
+				0FCC087927970A1600ACDE31 /* FriendView.swift */,
+				0FB4727D27A83323004FBA5F /* FriendViewModel.swift */,
+				0FB4727F27A838C3004FBA5F /* PhotoView.swift */,
+				0FB4728427A83982004FBA5F /* DetailPhotoView.swift */,
+			);
+			path = Friend;
+			sourceTree = "<group>";
+		};
 		0FCC08782797096200ACDE31 /* TabBarView */ = {
 			isa = PBXGroup;
 			children = (
 				0FD3E5142791C1C1009749A6 /* TabBarView.swift */,
 				0FD3E51B2791D0CA009749A6 /* Friends */,
+				0FB4727727A82E55004FBA5F /* Friend */,
 				0FD3E51C2791D0DF009749A6 /* Groups */,
 				0FD3E5212791D4A6009749A6 /* News */,
 			);
@@ -172,6 +198,7 @@
 				0F472B3E27905E5D007AA876 /* ViewModifier.swift */,
 				0F472B402790658C007AA876 /* BgImage.swift */,
 				0F472B4227906E43007AA876 /* Extentions.swift */,
+				0FA62E7A27A96080001D4990 /* HeartButton.swift */,
 			);
 			path = Extentions;
 			sourceTree = "<group>";
@@ -181,6 +208,7 @@
 			children = (
 				0FD3E5192791C660009749A6 /* Friend.swift */,
 				0FD3E51F2791D1CD009749A6 /* Group.swift */,
+				0FB4727827A83084004FBA5F /* Photo.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -191,7 +219,6 @@
 				0FD3E5162791C515009749A6 /* FriendsListView.swift */,
 				0F5B49FC279EF48100F064DC /* FriendsViewModel.swift */,
 				0FB6158F27903DB20028DD0F /* FriendListView.swift */,
-				0FCC087927970A1600ACDE31 /* FriendView.swift */,
 			);
 			path = Friends;
 			sourceTree = "<group>";
@@ -242,6 +269,8 @@
 				0F5B49FF279EFA5F00F064DC /* Realm */,
 				0F5B4A01279EFA5F00F064DC /* RealmSwift */,
 				0F5B4A0D27A1B85B00F064DC /* Alamofire */,
+				0FB4727B27A83298004FBA5F /* ASCollectionView */,
+				0FB4728227A83951004FBA5F /* Kingfisher */,
 			);
 			productName = "VK-SwiftUI";
 			productReference = 0FB34A51278C4CA500B81985 /* VK-SwiftUI.app */;
@@ -274,6 +303,8 @@
 			packageReferences = (
 				0F5B49FE279EFA5F00F064DC /* XCRemoteSwiftPackageReference "realm-swift" */,
 				0F5B4A0C27A1B85B00F064DC /* XCRemoteSwiftPackageReference "Alamofire" */,
+				0FB4727A27A83298004FBA5F /* XCRemoteSwiftPackageReference "ASCollectionView" */,
+				0FB4728127A83951004FBA5F /* XCRemoteSwiftPackageReference "Kingfisher" */,
 			);
 			productRefGroup = 0FB34A52278C4CA500B81985 /* Products */;
 			projectDirPath = "";
@@ -307,10 +338,12 @@
 				0F5B49FB279EF33600F064DC /* ApiRequests.swift in Sources */,
 				0F472B3F27905E5D007AA876 /* ViewModifier.swift in Sources */,
 				0F5B4A0B27A1B1C600F064DC /* DetachableObject.swift in Sources */,
+				0FB4727927A83084004FBA5F /* Photo.swift in Sources */,
 				0F5B4A0927A1A14E00F064DC /* RealmService.swift in Sources */,
 				0FD3E5232791D4C4009749A6 /* NewsView.swift in Sources */,
 				0F5B49F9279EEDBE00F064DC /* VKLoginWebView.swift in Sources */,
 				0FB34A57278C4CA500B81985 /* LoginView.swift in Sources */,
+				0FB4727E27A83323004FBA5F /* FriendViewModel.swift in Sources */,
 				0F5B4A04279EFF7E00F064DC /* MySession.swift in Sources */,
 				0F3EA7052795BF420016D99E /* LoginPasswordView.swift in Sources */,
 				0FD3E5172791C515009749A6 /* FriendsListView.swift in Sources */,
@@ -319,13 +352,16 @@
 				0FD3E5202791D1CD009749A6 /* Group.swift in Sources */,
 				0F472B4327906E43007AA876 /* Extentions.swift in Sources */,
 				0FB6159227904C880028DD0F /* GroupsListView.swift in Sources */,
+				0FA62E7B27A96080001D4990 /* HeartButton.swift in Sources */,
 				0FB34A55278C4CA500B81985 /* VK_SwiftUIApp.swift in Sources */,
 				0F3EA7072795C7D00016D99E /* ContainerView.swift in Sources */,
 				0F95B49627A8209B00DF7A29 /* CodingStyle.swift in Sources */,
+				0FB4728027A838C3004FBA5F /* PhotoView.swift in Sources */,
 				0F5B49FD279EF48100F064DC /* FriendsViewModel.swift in Sources */,
 				0FB6159027903DB20028DD0F /* FriendListView.swift in Sources */,
 				0FD3E51E2791D17E009749A6 /* GroupListView.swift in Sources */,
 				0FD3E51A2791C660009749A6 /* Friend.swift in Sources */,
+				0FB4728527A83982004FBA5F /* DetailPhotoView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -548,6 +584,22 @@
 				minimumVersion = 5.0.0;
 			};
 		};
+		0FB4727A27A83298004FBA5F /* XCRemoteSwiftPackageReference "ASCollectionView" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/apptekstudios/ASCollectionView";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+		0FB4728127A83951004FBA5F /* XCRemoteSwiftPackageReference "Kingfisher" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/onevcat/Kingfisher";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 7.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -565,6 +617,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 0F5B4A0C27A1B85B00F064DC /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
+		};
+		0FB4727B27A83298004FBA5F /* ASCollectionView */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FB4727A27A83298004FBA5F /* XCRemoteSwiftPackageReference "ASCollectionView" */;
+			productName = ASCollectionView;
+		};
+		0FB4728227A83951004FBA5F /* Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0FB4728127A83951004FBA5F /* XCRemoteSwiftPackageReference "Kingfisher" */;
+			productName = Kingfisher;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

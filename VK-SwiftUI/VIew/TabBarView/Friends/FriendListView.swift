@@ -9,48 +9,47 @@ import SwiftUI
 
 struct FriendListView: View {
     
-    @State private var isOnline: Bool = true
-    
     let friend: Friend
     
+    @State var animation = false
+    
     var body: some View {
-            HStack(spacing: 20) {
-                AsyncImage(
-                    url: URL(string: friend.photo),
-                    content: { image in
-                        image.resizable()
-                            .resizable()
-                            .scaledToFill()
-                            
-                            .modifier(RoundFrameWithShadow(frameColor: .white))
-                    }, placeholder: {
-                        ProgressView()
-                            
-                    }
-                ).frame(width: 100, height: 100)
-                
-                VStack(alignment: .leading) {
-                    Text(friend.firstName)
-                    if let lastName = friend.lastName {
-                        Text(lastName)
-                    }
-                    if let city = friend.city {
-                        HStack {
-                            Image(systemName: "house.circle.fill")
-                            Text(city.title)
-                                .font(Font.system(size: 14, design: .rounded))
-                            
-                        }.foregroundColor(Color.gray)
-                        
-//                        if friend.online == 1 {
-//                            Text("online")
-//                                .font(Font.system(size: 12, design: .rounded))
-//                                .foregroundColor(Color.green)
-//                        }
-                    }
+        HStack(spacing: 20) {
+            AsyncImage(
+                url: URL(string: friend.photo),
+                content: { image in
+                    image
+                        .resizable()
+                        .scaledToFill()
+                        .modifier(RoundFrameWithShadow(frameColor: .white))
+                        .frame(width: 100, height: 100)
+                        .scaleEffect(animation ? 1.2 : 1)
+                        .animation(.spring(response: 0.2, dampingFraction: 0.19), value: animation)
+                        .onTapGesture(count: 1, perform: {
+                            animation.toggle()
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.7) {
+                                animation.toggle()
+                            }
+                        })
+                }, placeholder: {
+                    ProgressView()
                 }
-                .font(Font.system(size: 20, design: .rounded).bold())
-            }
+            )
             
+            VStack(alignment: .leading) {
+                Text(friend.firstName)
+                if let lastName = friend.lastName {
+                    Text(lastName)
+                }
+                if let city = friend.city {
+                    HStack {
+                        Image(systemName: "house.circle.fill")
+                        Text(city.title)
+                            .font(Font.system(size: 14, design: .rounded))
+                    }.foregroundColor(Color.gray)
+                }
+            }
+            .font(Font.system(size: 20, design: .rounded).bold())
+        }
     }
 }

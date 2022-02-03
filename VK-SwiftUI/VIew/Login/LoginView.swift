@@ -73,10 +73,3 @@ struct LoginView: View {
         login = ""
     }
 }
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        LoginView()
-            .previewInterfaceOrientation(.portraitUpsideDown)
-    }
-}
