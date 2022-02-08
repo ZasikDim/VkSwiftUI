@@ -8,13 +8,14 @@
 import SwiftUI
 
 struct TabBarView: View {
-    
-    @State private var selection = 0
     let vkService = VKService()
     let realmService = RealmService()
     
+    @ObservedObject var navigationViewModel: NavigationViewModel
+    
     var body: some View {
-        TabView(selection: $selection) {
+        
+        TabView(selection: $navigationViewModel.tag) {
             FriendsListView(viewModel: FriendsViewModel(realmService: realmService, vkService: vkService))
                 .tabItem {
                     Label("Friends", systemImage: "person.circle.fill")
@@ -39,11 +40,5 @@ struct TabBarView: View {
             UITabBar.appearance().barTintColor = .white
             
         }
-    }
-}
-
-struct TabBarView_Previews: PreviewProvider {
-    static var previews: some View {
-        TabBarView()
     }
 }

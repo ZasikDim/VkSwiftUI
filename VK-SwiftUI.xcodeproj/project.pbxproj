@@ -24,6 +24,9 @@
 		0F5B4A0E27A1B85B00F064DC /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0F5B4A0D27A1B85B00F064DC /* Alamofire */; };
 		0F95B49627A8209B00DF7A29 /* CodingStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F95B49527A8209B00DF7A29 /* CodingStyle.swift */; };
 		0FA62E7B27A96080001D4990 /* HeartButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA62E7A27A96080001D4990 /* HeartButton.swift */; };
+		0FAB4FF127B2AE7E006FC5AC /* Coordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB4FF027B2AE7E006FC5AC /* Coordinator.swift */; };
+		0FAB4FF327B2AEA7006FC5AC /* AppCoordinator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB4FF227B2AEA7006FC5AC /* AppCoordinator.swift */; };
+		0FAB4FF627B2B429006FC5AC /* NavigationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FAB4FF527B2B429006FC5AC /* NavigationViewModel.swift */; };
 		0FB34A55278C4CA500B81985 /* VK_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB34A54278C4CA500B81985 /* VK_SwiftUIApp.swift */; };
 		0FB34A57278C4CA500B81985 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB34A56278C4CA500B81985 /* LoginView.swift */; };
 		0FB34A59278C4CA600B81985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FB34A58278C4CA600B81985 /* Assets.xcassets */; };
@@ -61,6 +64,9 @@
 		0F5B4A0A27A1B1C600F064DC /* DetachableObject.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetachableObject.swift; sourceTree = "<group>"; };
 		0F95B49527A8209B00DF7A29 /* CodingStyle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodingStyle.swift; sourceTree = "<group>"; };
 		0FA62E7A27A96080001D4990 /* HeartButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartButton.swift; sourceTree = "<group>"; };
+		0FAB4FF027B2AE7E006FC5AC /* Coordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Coordinator.swift; sourceTree = "<group>"; };
+		0FAB4FF227B2AEA7006FC5AC /* AppCoordinator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCoordinator.swift; sourceTree = "<group>"; };
+		0FAB4FF527B2B429006FC5AC /* NavigationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationViewModel.swift; sourceTree = "<group>"; };
 		0FB34A51278C4CA500B81985 /* VK-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB34A54278C4CA500B81985 /* VK_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK_SwiftUIApp.swift; sourceTree = "<group>"; };
 		0FB34A56278C4CA500B81985 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -119,6 +125,16 @@
 			path = Service;
 			sourceTree = "<group>";
 		};
+		0FAB4FF427B2AEAC006FC5AC /* Coordinator */ = {
+			isa = PBXGroup;
+			children = (
+				0FAB4FF027B2AE7E006FC5AC /* Coordinator.swift */,
+				0FAB4FF227B2AEA7006FC5AC /* AppCoordinator.swift */,
+				0FAB4FF527B2B429006FC5AC /* NavigationViewModel.swift */,
+			);
+			path = Coordinator;
+			sourceTree = "<group>";
+		};
 		0FB34A48278C4CA500B81985 = {
 			isa = PBXGroup;
 			children = (
@@ -141,6 +157,7 @@
 				0FB34A54278C4CA500B81985 /* VK_SwiftUIApp.swift */,
 				0F95B49527A8209B00DF7A29 /* CodingStyle.swift */,
 				0F5B4A0F27A2BDE300F064DC /* Service */,
+				0FAB4FF427B2AEAC006FC5AC /* Coordinator */,
 				0FD3E5182791C646009749A6 /* Model */,
 				0FD3E5122791C18B009749A6 /* VIew */,
 				0FD3E5132791C1A3009749A6 /* Extentions */,
@@ -335,6 +352,7 @@
 				0FD81E60278D935500E463DB /* Buttons.swift in Sources */,
 				0FD3E5152791C1C1009749A6 /* TabBarView.swift in Sources */,
 				0F5B4A0727A0497A00F064DC /* GroupsViewModel.swift in Sources */,
+				0FAB4FF627B2B429006FC5AC /* NavigationViewModel.swift in Sources */,
 				0F5B49FB279EF33600F064DC /* ApiRequests.swift in Sources */,
 				0F472B3F27905E5D007AA876 /* ViewModifier.swift in Sources */,
 				0F5B4A0B27A1B1C600F064DC /* DetachableObject.swift in Sources */,
@@ -352,10 +370,12 @@
 				0FD3E5202791D1CD009749A6 /* Group.swift in Sources */,
 				0F472B4327906E43007AA876 /* Extentions.swift in Sources */,
 				0FB6159227904C880028DD0F /* GroupsListView.swift in Sources */,
+				0FAB4FF327B2AEA7006FC5AC /* AppCoordinator.swift in Sources */,
 				0FA62E7B27A96080001D4990 /* HeartButton.swift in Sources */,
 				0FB34A55278C4CA500B81985 /* VK_SwiftUIApp.swift in Sources */,
 				0F3EA7072795C7D00016D99E /* ContainerView.swift in Sources */,
 				0F95B49627A8209B00DF7A29 /* CodingStyle.swift in Sources */,
+				0FAB4FF127B2AE7E006FC5AC /* Coordinator.swift in Sources */,
 				0FB4728027A838C3004FBA5F /* PhotoView.swift in Sources */,
 				0F5B49FD279EF48100F064DC /* FriendsViewModel.swift in Sources */,
 				0FB6159027903DB20028DD0F /* FriendListView.swift in Sources */,

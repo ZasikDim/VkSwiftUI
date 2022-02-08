@@ -16,7 +16,7 @@ struct ContainerView: View {
         NavigationView {
             HStack {
                 VKLoginWebView(shouldShowMainView: $shouldShowMainView)
-                NavigationLink(destination: TabBarView(),
+                NavigationLink(destination: TabBarView(navigationViewModel: NavigationViewModel()),
                                isActive: $shouldShowMainView) { EmptyView() }
             }
             .navigationViewStyle(StackNavigationViewStyle())
