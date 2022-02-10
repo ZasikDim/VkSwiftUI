@@ -7,19 +7,29 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		0F472B3F27905E5D007AA876 /* ViewModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F472B3E27905E5D007AA876 /* ViewModifier.swift */; };
+		0F472B412790658C007AA876 /* BgImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F472B402790658C007AA876 /* BgImage.swift */; };
+		0F472B4327906E43007AA876 /* Extentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0F472B4227906E43007AA876 /* Extentions.swift */; };
 		0FB34A55278C4CA500B81985 /* VK_SwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB34A54278C4CA500B81985 /* VK_SwiftUIApp.swift */; };
 		0FB34A57278C4CA500B81985 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB34A56278C4CA500B81985 /* ContentView.swift */; };
 		0FB34A59278C4CA600B81985 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FB34A58278C4CA600B81985 /* Assets.xcassets */; };
 		0FB34A5C278C4CA600B81985 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0FB34A5B278C4CA600B81985 /* Preview Assets.xcassets */; };
+		0FB6159027903DB20028DD0F /* UserView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB6158F27903DB20028DD0F /* UserView.swift */; };
+		0FB6159227904C880028DD0F /* GroupView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FB6159127904C880028DD0F /* GroupView.swift */; };
 		0FD81E60278D935500E463DB /* Buttons.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FD81E5F278D935500E463DB /* Buttons.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		0F472B3E27905E5D007AA876 /* ViewModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModifier.swift; sourceTree = "<group>"; };
+		0F472B402790658C007AA876 /* BgImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BgImage.swift; sourceTree = "<group>"; };
+		0F472B4227906E43007AA876 /* Extentions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extentions.swift; sourceTree = "<group>"; };
 		0FB34A51278C4CA500B81985 /* VK-SwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "VK-SwiftUI.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FB34A54278C4CA500B81985 /* VK_SwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VK_SwiftUIApp.swift; sourceTree = "<group>"; };
 		0FB34A56278C4CA500B81985 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		0FB34A58278C4CA600B81985 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0FB34A5B278C4CA600B81985 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		0FB6158F27903DB20028DD0F /* UserView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserView.swift; sourceTree = "<group>"; };
+		0FB6159127904C880028DD0F /* GroupView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupView.swift; sourceTree = "<group>"; };
 		0FD81E5F278D935500E463DB /* Buttons.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Buttons.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -55,6 +65,11 @@
 			children = (
 				0FB34A54278C4CA500B81985 /* VK_SwiftUIApp.swift */,
 				0FB34A56278C4CA500B81985 /* ContentView.swift */,
+				0FB6158F27903DB20028DD0F /* UserView.swift */,
+				0FB6159127904C880028DD0F /* GroupView.swift */,
+				0F472B3E27905E5D007AA876 /* ViewModifier.swift */,
+				0F472B402790658C007AA876 /* BgImage.swift */,
+				0F472B4227906E43007AA876 /* Extentions.swift */,
 				0FD81E61278D94B100E463DB /* CustomUI */,
 				0FB34A58278C4CA600B81985 /* Assets.xcassets */,
 				0FB34A5A278C4CA600B81985 /* Preview Content */,
@@ -149,8 +164,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0FD81E60278D935500E463DB /* Buttons.swift in Sources */,
+				0F472B3F27905E5D007AA876 /* ViewModifier.swift in Sources */,
 				0FB34A57278C4CA500B81985 /* ContentView.swift in Sources */,
+				0F472B412790658C007AA876 /* BgImage.swift in Sources */,
+				0F472B4327906E43007AA876 /* Extentions.swift in Sources */,
+				0FB6159227904C880028DD0F /* GroupView.swift in Sources */,
 				0FB34A55278C4CA500B81985 /* VK_SwiftUIApp.swift in Sources */,
+				0FB6159027903DB20028DD0F /* UserView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
