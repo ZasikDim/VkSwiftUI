@@ -6,36 +6,37 @@
 //
 
 import SwiftUI
-import ASCollectionView
+//import ASCollectionView
 
 struct FriendView: View {
     
     @ObservedObject var viewModel = FriendViewModel(vkService: VKService())
     let friend: Friend
     
+    private let columns = [
+        GridItem(.flexible(minimum: 0, maximum: .infinity)),
+        GridItem(.flexible(minimum: 0, maximum: .infinity))
+    ]
+    
     var body: some View {
-        ASCollectionView(data: viewModel.photos) { (photo, context) in
-            NavigationLink(destination: DetailPhotoView(photo: photo))
-            {
-                PhotoView(photo: photo)
-            }
-        }
-        .layout {
-            let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-            let width = UIScreen.main.bounds.width / 2
-            layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-            layout.itemSize = CGSize(width: width, height: width)
-            layout.minimumInteritemSpacing = 0
-            layout.minimumLineSpacing = 0
-            layout.scrollDirection = .vertical
-            return layout
-        }
-        .onAppear {
-            viewModel.getPhotos(for: friend)
-        }
-        .navigationTitle("Фотографии")
-        .navigationBarTitleDisplayMode(.inline)
-    }
+        GeometryReader { geometry in
+            ScrollView(.vertical) {
+                LazyVGrid(columns: columns) {
+                    if let photos = viewModel.photos {
+                        ForEach(photos) { photo in
+                            PhotoView(photo: photo)
+                                .frame(height: geometry.size.width / 2)
+                        }
+                    }
+                }//- LazyVGrid
+                .onAppear {
+                    viewModel.getPhotos(for: friend)
+                }
+            }//-ScrollView
+            .navigationTitle("Фотографии")
+            .navigationBarTitleDisplayMode(.inline)
+        }//-GeometryReader
+    }//-View
 }
 
 //struct FriendView_Previews: PreviewProvider {
